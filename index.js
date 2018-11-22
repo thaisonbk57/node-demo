@@ -15,6 +15,23 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+const users = [
+  {
+    id: 1,
+    name: "Minh Thong"
+  },
+  {
+    id: 2,
+    name: "Minh Tu"
+  }
+];
+
+app.get("/", (req, res) => {
+  res.render("users/index", {
+    users
+  });
+});
+
 app.listen(port, () => {
   console.log(`listening to port ${port}...`);
 });
