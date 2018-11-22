@@ -26,7 +26,7 @@ const users = [
   }
 ];
 
-app.get("/", (req, res) => {
+app.get("/users", (req, res) => {
   res.render("users/index", {
     users
   });
